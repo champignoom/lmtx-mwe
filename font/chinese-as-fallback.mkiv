@@ -1,0 +1,31 @@
+% \mainlanguage[cn]  % not sure if still necessary
+% \language[cn]      % not sure if still necessary
+
+\setscript[hanzi]
+
+\definefontfeature[fakebold][effect={width=0.1,delta=0.1,factor=0.1}] % for fonts without bold
+
+\definefallbackfamily
+  [mainfont]
+  [serif]
+  [nsimsun] % get this name by running `mtxrun --script font --list --all`
+  [range={cjkunifiedideographs, cjksymbolsandpunctuation, halfwidthandfullwidthforms, enclosedalphanumerics},
+   bf={style:regular,features:fakebold}, % if you want to fake the bold font
+   ]
+\definefallbackfamily
+  [mainfont]
+  [mono]
+  [nsimsun]
+  [range={cjkunifiedideographs, cjksymbolsandpunctuation, halfwidthandfullwidthforms, enclosedalphanumerics}]
+
+\definefontfamily [mainfont] [serif] [Latin Modern Roman] % use Latin Modern for latin letters
+\definefontfamily [mainfont] [math] [Latin Modern Math]   % required for typesetting math
+\definefontfamily [mainfont] [mono] [Latin Modern Mono] [features=none] % required for typesetting code
+
+\setupbodyfont [mainfont]
+
+\starttext
+
+一二三四五
+
+\stoptext
