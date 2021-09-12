@@ -1,0 +1,13 @@
+\startuniqueMPgraphic{concept}
+     StartPage;
+         draw fullcircle scaled 1cm shifted (10cm,10cm);
+         draw Page withpen pencircle scaled 5mm;
+     StopPage;
+\stopuniqueMPgraphic
+
+\defineoverlay[concept][\uniqueMPgraphic{concept}]
+\setupbackgrounds[page][background=concept]
+
+\starttext
+.
+\stoptext
