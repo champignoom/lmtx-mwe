@@ -1,0 +1,4 @@
+- table of content
+- pdf page numbering
+- bibliography
+- vim typing
