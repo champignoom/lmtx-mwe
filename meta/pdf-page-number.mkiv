@@ -1,0 +1,20 @@
+\definestructureconversionset[frontpart:pagenumber][][romannumerals]
+\definestructureconversionset[bodypart:pagenumber] [][numbers]
+
+\startsectionblockenvironment[frontpart]
+\setupuserpagenumber[numberconversion=romannumerals]
+\setuppagenumber[number=1]
+\stopsectionblockenvironment
+
+\startsectionblockenvironment[bodypart]
+\setuppagenumber[number=1]
+\stopsectionblockenvironment
+
+\starttext
+\startfrontmatter
+\dorecurse{25}{\null\page}
+\stopfrontmatter
+\startbodymatter
+\dorecurse{25}{\null\page}
+\stopbodymatter
+\stoptext
