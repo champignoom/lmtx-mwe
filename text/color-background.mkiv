@@ -1,10 +1,4 @@
-\definebar
-  [foobar]
-  [color=yellow,
-   rulethickness=1.2em,
-   offset=1.4,
-   continue=yes,
-   order=background]
+\definetextbackground[important][frame=no,background=color,backgroundcolor=red]
 \starttext
-abc\foobar{12345xy}z
+abc\important{123{\switchtobodyfont[40pt]45}xy}z
 \stoptext
